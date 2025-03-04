@@ -1,4 +1,4 @@
-# EPICV2 Deconvolution
+# EPICV2 Deconvolution for cfDNA
 
 This code is an adaptation of @nloyfer's methylation atlas [deconvolution scripts ](https://github.com/nloyfer/meth_atlas?tab=readme-ov-file) that have been changed to work with EPICV2 data. These scripts run the deconvolution method developed by [Moss et al. 2018](https://www.nature.com/articles/s41467-018-07466-6).
 
@@ -6,8 +6,8 @@ This code is an adaptation of @nloyfer's methylation atlas [deconvolution script
  - reassign_minfi_funcs_EpicV2.R reassigns two minfi functions (.isEpic and combineArrays) to detect EpicV2 array data, and to load the appropriate annotation
  - process_array_EpicV2.R is adapted from @nloyfer's process_array.R. It has been changed to:
       1.  Run reassign_minfi_funcs_EpicV2.R after loading in minfi
-      2.  Only load in samples from peripheral blood in the case of batches with mixed sample origins.
-      3.  Exclude the use of a reference sample (since the whole blood samples are being processed and normalized as a group, a ref sample is no longer necessary).
+      2.  Only load in cfDNA samples in the case of batches with mixed sample types.
+      3.  Exclude the use of a reference sample (since cfDNA samples are being processed and normalized as a group, a ref sample is no longer necessary).
   
  - To run: `Rscript process_array_kitzhu2.R ./idats/ ./Blood_Decon_LoyferMethod.csv`
 
