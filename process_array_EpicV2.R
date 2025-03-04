@@ -53,9 +53,9 @@ process_array <- function(array_dir, out_path, ref_sample_path=args[3])
 	
 	print(paste0("1. process_array script - READING ARRAY - ",Sys.time()))
 
-    	# Select samples from whole blood #
+    	# Select cfDNA samples 
     	targets_pre <- read.csv("/u/scratch/k/kitzhu/TargetPhenos_Full.csv", header=T) %>% 
-        filter(Tissue == "Blood")
+        filter(Tissue == "cfDNA")
     	write.csv(targets_pre, file = file.path(array_dir, "targets.csv"), row.names = FALSE)
 
 	# Read in Sample Sheet
