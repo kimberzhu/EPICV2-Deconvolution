@@ -4,7 +4,7 @@ This code is an adaptation of @nloyfer's methylation atlas [deconvolution script
 
 **For processing the array data:**
  - reassign_minfi_funcs_EpicV2.R reassigns two minfi functions (.isEpic and combineArrays) to detect EpicV2 array data, and to load the appropriate annotation
- - process_array_kitzhu2.R is adapted from @nloyfer's process_array.R. It has been changed to:
+ - process_array_Epic2.R is adapted from @nloyfer's process_array.R. It has been changed to:
       1.  Run reassign_minfi_funcs_EpicV2.R after loading in minfi
       2.  Only load in samples from whole blood in the case of batches with mixed sample origins.
       3.  Exclude the use of a reference sample (since the whole blood samples are being processed and normalized as a group, a ref sample is no longer necessary).
